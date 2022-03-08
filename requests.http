@@ -3,3 +3,6 @@ GET http://localhost:3000/first-recipe
 
 ###
 GET http://localhost:3000/all-recipes
+
+###
+GET http://localhost:3000/second-recipe
