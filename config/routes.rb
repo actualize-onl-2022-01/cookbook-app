@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # make a web request to see the first recipe
+  get "/first-recipe" => "recipes#initial_recipe"
 end
