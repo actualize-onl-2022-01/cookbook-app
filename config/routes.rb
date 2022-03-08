@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   # make a web request to see the first recipe
   get "/first-recipe" => "recipes#initial_recipe"
+  get "/all-recipes" => "recipes#all"
 end
