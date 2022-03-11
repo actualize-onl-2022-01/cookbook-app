@@ -18,3 +18,7 @@ content-type: application/json
   "input_prep_time": 100,
   "input_image_url": "https://www.thespruceeats.com/thmb/I75OB9paT-KRF4Q64kXFaLMH27w=/3000x2000/filters:fill(auto,1)/what-is-falafel-2355693-Hero_01-ba33428ae8704932ba4e43b526bb81ff.jpg"
 }
+
+
+###
+PATCH http://localhost:3000/recipes/6

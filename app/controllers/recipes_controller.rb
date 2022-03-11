@@ -32,4 +32,20 @@ class RecipesController < ApplicationController
 
     render json: recipe.as_json
   end
+
+  def update
+    # update a recipe
+    recipe = Recipe.find_by(id: 113)
+
+    recipe.title = "apple pie"
+    recipe.ingredients = "apple, sugar, flour, cinnamon"
+    recipe.prep_time = 200
+    recipe.image_url = "https://kristineskitchenblog.com/wp-content/uploads/2021/04/apple-pie-1200-square-592-2.jpg"
+    recipe.chef = "brian"
+    recipe.directions = "bake the pie"
+    recipe.save
+
+
+    render json: recipe.as_json
+  end
 end
