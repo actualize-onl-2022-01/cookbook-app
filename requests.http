@@ -27,3 +27,6 @@ content-type: application/json
 {
   "input_prep_time": 50
 }
+
+###
+DELETE http://localhost:3000/recipes/116
