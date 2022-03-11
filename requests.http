@@ -25,11 +25,5 @@ PATCH http://localhost:3000/recipes/115
 content-type: application/json
 
 {
-  "input_title": "candy bar",
-  "input_prep_time": 10,
-  "input_chef": "willy wonka",
-  "input_directions": "don't know",
-  "input_ingredients": "chocolate, caramel",
-  "input_image_url": "https://images.heb.com/is/image/HEBGrocery/000098268?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0"
-
+  "input_prep_time": 50
 }
