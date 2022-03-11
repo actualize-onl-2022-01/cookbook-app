@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # make a web request to see the first recipe
+  # ALL RECIPES
   get "/recipes" => "recipes#index"
+  # ONE RECIPE
+  get "/recipes/:id" => "recipes#show"
 end
