@@ -35,16 +35,14 @@ class RecipesController < ApplicationController
 
   def update
     # update a recipe
-    recipe = Recipe.find_by(id: 113)
-
-    recipe.title = "apple pie"
-    recipe.ingredients = "apple, sugar, flour, cinnamon"
-    recipe.prep_time = 200
-    recipe.image_url = "https://kristineskitchenblog.com/wp-content/uploads/2021/04/apple-pie-1200-square-592-2.jpg"
-    recipe.chef = "brian"
-    recipe.directions = "bake the pie"
+    recipe = Recipe.find_by(id: params[:id])
+    recipe.title = params[:input_title]
+    recipe.ingredients = params[:input_ingredients]
+    recipe.prep_time = params[:input_prep_time]
+    recipe.image_url = params[:input_image_url]
+    recipe.chef = params[:input_chef]
+    recipe.directions = params[:input_directions]
     recipe.save
-
 
     render json: recipe.as_json
   end
