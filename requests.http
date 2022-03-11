@@ -4,3 +4,17 @@ GET http://localhost:3000/recipes
 
 ###
 GET http://localhost:3000/recipes/110
+
+
+###
+POST http://localhost:3000/recipes
+content-type: application/json
+
+{
+  "input_chef": "Rachel Ray",
+  "input_title": "falafel",
+  "input_ingredients": "chickpeas, bread, spices",
+  "input_directions": "put in blender, and fry",
+  "input_prep_time": 100,
+  "input_image_url": "https://www.thespruceeats.com/thmb/I75OB9paT-KRF4Q64kXFaLMH27w=/3000x2000/filters:fill(auto,1)/what-is-falafel-2355693-Hero_01-ba33428ae8704932ba4e43b526bb81ff.jpg"
+}
