@@ -3,7 +3,7 @@ GET http://localhost:3000/recipes
 
 
 ###
-GET http://localhost:3000/recipes/110
+GET http://localhost:3000/recipes/122
 
 
 ###
