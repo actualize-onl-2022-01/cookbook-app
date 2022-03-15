@@ -20,7 +20,7 @@ class RecipesController < ApplicationController
     # directions
     # prep_time
     # image_url
-    recipe = Recipe.new(
+    @recipe = Recipe.new(
       chef: params[:input_chef],
       title: params[:input_title],
       ingredients: params[:input_ingredients],
@@ -29,24 +29,24 @@ class RecipesController < ApplicationController
       image_url: params[:input_image_url],
     )
 
-    recipe.save
+    @recipe.save
 
-    render json: recipe.as_json
+    render template: "recipes/show"
   end
 
   def update
     # update a recipe
-    recipe = Recipe.find_by(id: params[:id])
+    @recipe = Recipe.find_by(id: params[:id])
     
-    recipe.title = params[:input_title] || recipe.title
-    recipe.ingredients = params[:input_ingredients] || recipe.ingredients
-    recipe.prep_time = params[:input_prep_time] || recipe.prep_time
-    recipe.image_url = params[:input_image_url] || recipe.image_url
-    recipe.chef = params[:input_chef] || recipe.chef
-    recipe.directions = params[:input_directions] || recipe.directions
-    recipe.save
+    @recipe.title = params[:input_title] || @recipe.title
+    @recipe.ingredients = params[:input_ingredients] || @recipe.ingredients
+    @recipe.prep_time = params[:input_prep_time] || @recipe.prep_time
+    @recipe.image_url = params[:input_image_url] || @recipe.image_url
+    @recipe.chef = params[:input_chef] || @recipe.chef
+    @recipe.directions = params[:input_directions] || @recipe.directions
+    @recipe.save
 
-    render json: recipe.as_json
+    render template: "recipes/show"
   end
 
   def destroy
