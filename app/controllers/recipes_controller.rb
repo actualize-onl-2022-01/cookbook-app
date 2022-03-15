@@ -1,15 +1,16 @@
 class RecipesController < ApplicationController
   def index
     # show ALL the recipes
-    recipes = Recipe.all
-    render json: recipes.as_json(methods: [:ingredients_list, :directions_list, :friendly_updated_at, :prep_time_hours_minutes])
+    @recipes = Recipe.all
+    render template: "recipes/index"
   end
 
   def show
     the_id = params[:id]
-    recipe = Recipe.find_by(id: the_id)
-    render json: recipe.as_json(methods: [:ingredients_list, :directions_list, :friendly_updated_at, :prep_time_hours_minutes])
+    @recipe = Recipe.find_by(id: the_id)
+    render template: "recipes/show"
   end
+  # MVC
 
   def create
     # make a new recipe
