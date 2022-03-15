@@ -12,8 +12,15 @@ class Recipe < ApplicationRecord
   end
 
   def prep_time_hours_minutes
+    result = ""
     hours = prep_time / 60
+    if hours > 0
+      result += "#{hours} hours and"
+    end
     minutes = prep_time % 60
-    "#{hours} hours and #{minutes} minutes"
+    if minutes > 0
+      result += "#{minutes} minutes"
+    end    
+    result
   end
 end
