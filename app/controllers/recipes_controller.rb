@@ -1,6 +1,9 @@
 class RecipesController < ApplicationController
   def index
     # show ALL the recipes
+    pp "current_user"
+    pp current_user
+    pp "/current_user"
     @recipes = Recipe.all
     render template: "recipes/index"
   end

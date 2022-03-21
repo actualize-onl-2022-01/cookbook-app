@@ -1,5 +1,5 @@
 GET http://localhost:3000/recipes.json
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDc5NzI5MjR9.BIllaSrGEzZ4bNf_GbI_oyVI2-AwAqydLe5pEzQ5RpE
 
 
 ###
@@ -37,8 +37,8 @@ POST http://localhost:3000/users
 content-type: application/json
 
 {
-  "name": "leslie",
-  "email": "leslie@pawnee.us",
+  "name": "donna",
+  "email": "donna@pawnee.us",
   "password": "password",
   "password_digest": "password"
 }
@@ -48,6 +48,6 @@ POST http://localhost:3000/sessions
 content-type: application/json
 
 {
-  "email": "bob@bob.com",
+  "email": "donna@pawnee.us",
   "password": "password"
 }
