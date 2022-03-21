@@ -3,7 +3,7 @@ GET http://localhost:3000/recipes.json
 
 
 ###
-GET http://localhost:3000/recipes/113.json
+GET http://localhost:3000/recipes/113
 
 
 ###
@@ -30,3 +30,24 @@ content-type: application/json
 
 ###
 DELETE http://localhost:3000/recipes/116
+
+
+###
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+  "name": "leslie",
+  "email": "leslie@pawnee.us",
+  "password": "password",
+  "password_digest": "password"
+}
+
+###
+POST http://localhost:3000/sessions
+content-type: application/json
+
+{
+  "email": "bob@bob.com",
+  "password": "password"
+}
