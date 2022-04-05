@@ -1,9 +1,9 @@
 class RecipesController < ApplicationController
   def index
     # show ALL the recipes
-    pp "current_user"
-    pp current_user
-    pp "/current_user"
+    # pp "current_user"
+    # pp current_user
+    # pp "/current_user"
     @recipes = Recipe.all
     render template: "recipes/index"
   end
@@ -30,9 +30,10 @@ class RecipesController < ApplicationController
       directions: params[:input_directions],
       prep_time: params[:input_prep_time],
       image_url: params[:input_image_url],
+      user_id: current_user.id
     )
 
-    @recipe.save
+    @recipe.save!
 
     render template: "recipes/show"
   end
