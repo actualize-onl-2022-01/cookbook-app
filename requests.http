@@ -26,7 +26,7 @@ PATCH http://localhost:3000/recipes/115.json
 content-type: application/json
 
 {
-  "input_prep_time": 50
+  "prep_time": 500
 }
 
 ###

@@ -42,12 +42,13 @@ class RecipesController < ApplicationController
     # update a recipe
     @recipe = Recipe.find_by(id: params[:id])
     
-    @recipe.title = params[:input_title] || @recipe.title
-    @recipe.ingredients = params[:input_ingredients] || @recipe.ingredients
-    @recipe.prep_time = params[:input_prep_time] || @recipe.prep_time
-    @recipe.image_url = params[:input_image_url] || @recipe.image_url
-    @recipe.chef = params[:input_chef] || @recipe.chef
-    @recipe.directions = params[:input_directions] || @recipe.directions
+    @recipe.title = params[:title] || @recipe.title
+    @recipe.ingredients = params[:ingredients] || @recipe.ingredients
+    @recipe.prep_time = params[:prep_time] || @recipe.prep_time
+    @recipe.image_url = params[:image_url] || @recipe.image_url
+    @recipe.chef = params[:chef] || @recipe.chef
+    @recipe.directions = params[:directions] || @recipe.directions
+    @recipe.user_id = current_user.id || @recipe.user_id
     @recipe.save
 
     render template: "recipes/show"
