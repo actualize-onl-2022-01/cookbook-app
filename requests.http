@@ -3,7 +3,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDc5NzUwM
 
 
 ###
-GET http://localhost:3000/recipes/113
+GET http://localhost:3000/recipes/111.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDk5NjM2MDN9.CgkwjF0x-kkFl4cscR1GPxf2WQp5TuAcMSei9FVtSFo
 
 
 ###
@@ -38,8 +39,8 @@ POST http://localhost:3000/users
 content-type: application/json
 
 {
-  "name": "donna",
-  "email": "donna@pawnee.us",
+  "name": "leslie",
+  "email": "leslie@pawnee.us",
   "password": "password",
   "password_digest": "password"
 }
@@ -49,6 +50,20 @@ POST http://localhost:3000/sessions
 content-type: application/json
 
 {
-  "email": "donna@pawnee.us",
+  "email": "leslie@pawnee.us",
   "password": "password"
 }
+
+
+# Open source
+
+# pros
+# you don't have to pay to use it
+# potentially millions of contributors
+# potentially more secute
+
+
+# cons
+# you don't (usually) get paid to write it
+# may not continue to be maintained
+# no deadlines

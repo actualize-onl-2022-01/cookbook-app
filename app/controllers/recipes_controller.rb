@@ -24,12 +24,12 @@ class RecipesController < ApplicationController
     # prep_time
     # image_url
     @recipe = Recipe.new(
-      chef: params[:input_chef],
-      title: params[:input_title],
-      ingredients: params[:input_ingredients],
-      directions: params[:input_directions],
-      prep_time: params[:input_prep_time],
-      image_url: params[:input_image_url],
+      chef: params[:chef],
+      title: params[:title],
+      ingredients: params[:ingredients],
+      directions: params[:directions],
+      prep_time: params[:prep_time],
+      image_url: params[:image_url],
       user_id: current_user.id
     )
 

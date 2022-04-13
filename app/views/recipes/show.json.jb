@@ -10,5 +10,7 @@
   prep_time_hours_minutes: @recipe.prep_time_hours_minutes,
   directions_list: @recipe.directions_list,
   created_at: @recipe.created_at,
-  updated_at: @recipe.updated_at
+  updated_at: @recipe.updated_at,
+  user_id: @recipe.user_id,
+  owner: @recipe.user_id == current_user.id
 }
