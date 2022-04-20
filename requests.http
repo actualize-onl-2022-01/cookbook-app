@@ -1,5 +1,5 @@
-GET http://localhost:3000/recipes.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDc5NzUwMTV9.1GG1zZvyAkGo50HXfCqWKLD2D81l9jqWwqgcjRhIsDo
+GET https://sheltered-peak-08732.herokuapp.com/recipes.json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDc5NzUwMTV9.1GG1zZvyAkGo50HXfCqWKLD2D81l9jqWwqgcjRhIsDo
 
 
 ###
@@ -8,8 +8,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDk5NjM2M
 
 
 ###
-POST http://localhost:3000/recipes.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDc5NzQ0MDB9.hJ0TcmZ9ygv5QVNcB7OxdZGrLp73VmeVCyL6d03Chk8
+POST http://localhost:3000/recipes
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NTk3OTF9.sjy1KnRdYucjbbEmDYkiZ4ZYRv9K2hnegB2yZ5qbMD8
 content-type: application/json
 
 {
@@ -46,7 +46,7 @@ content-type: application/json
 }
 
 ###
-POST http://localhost:3000/sessions
+POST https://sheltered-peak-08732.herokuapp.com/sessions
 content-type: application/json
 
 {
