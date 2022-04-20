@@ -1,9 +1,5 @@
 class RecipesController < ApplicationController
   def index
-    # show ALL the recipes
-    # pp "current_user"
-    # pp current_user
-    # pp "/current_user"
     @recipes = Recipe.all
     render template: "recipes/index"
   end
@@ -13,16 +9,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find_by(id: the_id)
     render template: "recipes/show"
   end
-  # MVC
 
   def create
-    # make a new recipe
-    # chef
-    # title
-    # ingredients
-    # directions
-    # prep_time
-    # image_url
     @recipe = Recipe.new(
       chef: params[:chef],
       title: params[:title],
@@ -33,13 +21,12 @@ class RecipesController < ApplicationController
       user_id: current_user.id
     )
 
-    @recipe.save!
+    @recipe.save
 
     render template: "recipes/show"
   end
 
   def update
-    # update a recipe
     @recipe = Recipe.find_by(id: params[:id])
     
     @recipe.title = params[:title] || @recipe.title
