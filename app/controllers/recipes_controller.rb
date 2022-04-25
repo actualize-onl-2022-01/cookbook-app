@@ -1,6 +1,8 @@
 class RecipesController < ApplicationController
   def index
+    # p "about to run Recipe.all"
     @recipes = Recipe.all
+    # p @recipes
     render template: "recipes/index"
   end
 
