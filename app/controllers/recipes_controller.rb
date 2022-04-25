@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user, only: [:create]
+  
   def index
     # p "about to run Recipe.all"
     @recipes = Recipe.all

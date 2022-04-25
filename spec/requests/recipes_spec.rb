@@ -80,4 +80,36 @@ RSpec.describe "Recipes", type: :request do
       expect(response).to have_http_status(200)
     end
   end
+
+
+  describe "POST /recipes" do
+    it "creates a recipe" do
+      user = User.new(email: "larry@test.com", password: "password", name: "larry")
+      user.save! 
+
+      jwt = JWT.encode({user_id: user.id, exp: 24.hours.from_now.to_i},Rails.application.credentials.fetch(:secret_key_base),"HS256")
+      
+      
+      post "/recipes.json", params: {
+        title: "New title",
+        chef: "New chef",
+        prep_time: "100",
+        ingredients: "New ingredients",
+        directions: "New directions",
+        image_url: "New image_url",
+      }, headers: {"Authorization" => "Bearer #{jwt}"}
+      recipe = JSON.parse(response.body)
+
+      expect(response).to have_http_status(200)
+      expect(recipe["title"]).to eq("New title")
+    end
+
+    it 'returns \'unauthorized\' if user is not logged in' do       
+      post "/recipes.json"
+      empty_hash = JSON.parse(response.body)
+
+      expect(response).to have_http_status(401)
+      expect(empty_hash).to eq({})
+    end
+  end
 end
